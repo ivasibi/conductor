@@ -1,4 +1,9 @@
 .idea/
+.terraform/
 
 *.iml
 *.tfvars
+
+.terraform.lock.hcl
+terraform.tfstate
+terraform.tfstate.backup
