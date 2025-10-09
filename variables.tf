@@ -15,3 +15,21 @@ variable "proxmoxve_password" {
   type        = string
   sensitive   = true
 }
+
+variable "proxmoxve_node_name" {
+  description = "Proxmox VE Node Name"
+  type = string
+  default = "proxmoxve"
+}
+
+variable "proxmoxve_import_datastore" {
+  description = "Proxmox VE Import Datastore"
+  type = string
+  default = "local"
+}
+
+variable "proxmoxve_timeout" {
+  description = "Proxmox VE Timeout"
+  type = number
+  default = 600
+}
