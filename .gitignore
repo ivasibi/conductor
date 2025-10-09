@@ -5,6 +5,7 @@
 *.tfvars
 
 .terraform.lock.hcl
+.terraform.tfstate.lock.info
 SKETCHPAD.md
 terraform.tfstate
 terraform.tfstate.backup

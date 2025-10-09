@@ -1,4 +1,4 @@
-resource "proxmox_virtual_environment_download_file" "fedora_cloud_42" {
+resource "proxmox_virtual_environment_download_file" "fedora" {
   node_name          = "proxmox"
   datastore_id       = "local"
   content_type       = "import"
