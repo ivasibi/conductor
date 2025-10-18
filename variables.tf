@@ -1,34 +1,34 @@
-variable "proxmoxve_endpoint" {
+variable "pve_endpoint" {
   description = "Proxmox VE Endpoint"
   type        = string
   default     = "https://192.168.1.200:8006"
 }
 
-variable "proxmoxve_username" {
+variable "pve_username" {
   description = "Proxmox VE Username"
   type        = string
   default     = "root@pam"
 }
 
-variable "proxmoxve_password" {
+variable "pve_password" {
   description = "Proxmox VE Password"
   type        = string
   sensitive   = true
 }
 
-variable "proxmoxve_node_name" {
-  description = "Proxmox VE Node Name"
+variable "pve_node" {
+  description = "Proxmox VE Node"
   type = string
-  default = "proxmoxve"
+  default = "pve"
 }
 
-variable "proxmoxve_import_datastore" {
-  description = "Proxmox VE Import Datastore"
+variable "pve_import" {
+  description = "Proxmox VE Import"
   type = string
   default = "local"
 }
 
-variable "proxmoxve_timeout" {
+variable "pve_timeout" {
   description = "Proxmox VE Timeout"
   type = number
   default = 600
