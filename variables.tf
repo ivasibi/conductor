@@ -28,6 +28,12 @@ variable "pve_import" {
   default = "local"
 }
 
+variable "pve_disk" {
+  description = "Proxmox VE Disk"
+  type = string
+  default = "local-lvm"
+}
+
 variable "pve_timeout" {
   description = "Proxmox VE Timeout"
   type = number

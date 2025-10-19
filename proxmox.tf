@@ -8,3 +8,19 @@ resource "proxmox_virtual_environment_download_file" "fedora" {
   checksum_algorithm = "sha256"
   upload_timeout     = var.pve_timeout
 }
+
+resource "proxmox_virtual_environment_vm" "template" {
+  node_name = var.pve_node
+  name      = "template"
+  vm_id     = 900
+  tags      = ["terraform"]
+  template  = true
+  started   = false
+
+  disk {
+    import_from  = proxmox_virtual_environment_download_file.fedora.id
+    datastore_id = var.pve_disk
+    interface    = "scsi0"
+    size         = 8
+  }
+}
