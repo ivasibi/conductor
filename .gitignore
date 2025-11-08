@@ -1,11 +1,9 @@
 .idea/
 .terraform/
+terraform.tfstate.d/
+
+.terraform.lock.hcl
+SKETCHPAD.md
 
 *.iml
 *.tfvars
-
-.terraform.lock.hcl
-.terraform.tfstate.lock.info
-SKETCHPAD.md
-terraform.tfstate
-terraform.tfstate.backup
