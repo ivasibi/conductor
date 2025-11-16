@@ -1,4 +1,4 @@
-resource "proxmox_virtual_environment_download_file" "fedora" {
+resource "proxmox_virtual_environment_download_file" "pve1_image" {
   node_name          = "pve1"
   datastore_id       = "local"
   content_type       = "import"
@@ -9,16 +9,16 @@ resource "proxmox_virtual_environment_download_file" "fedora" {
   upload_timeout     = 1800
 }
 
-resource "proxmox_virtual_environment_vm" "template" {
+resource "proxmox_virtual_environment_vm" "pve1_template" {
   node_name = "pve1"
   name      = "template"
-  vm_id     = 900
+  vm_id     = 901
   tags      = ["terraform"]
   template  = true
   started   = false
 
   disk {
-    import_from  = proxmox_virtual_environment_download_file.fedora.id
+    import_from  = proxmox_virtual_environment_download_file.pve1_image.id
     datastore_id = "local-lvm"
     interface    = "scsi0"
     size         = 8
