@@ -13,7 +13,7 @@ resource "proxmox_virtual_environment_vm" "pve1_template" {
   node_name = "pve1"
   name      = "template"
   vm_id     = 901
-  tags      = ["terraform"]
+  tags      = ["conductor"]
   template  = true
   started   = false
 
