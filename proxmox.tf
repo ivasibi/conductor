@@ -24,3 +24,9 @@ resource "proxmox_virtual_environment_vm" "pve1_template" {
     size         = 8
   }
 }
+
+module "ascent" {
+  source = "./modules/ascent"
+
+  pve1_template = proxmox_virtual_environment_vm.pve1_template.id
+}
