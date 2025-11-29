@@ -1,8 +1,8 @@
 .idea/
-.terraform/
-terraform.tfstate.d/
+src/terraform/.terraform/
+src/terraform/terraform.tfstate.d/
 
-.terraform.lock.hcl
+src/terraform/.terraform.lock.hcl
 SKETCHPAD.md
 
 *.iml
