@@ -7,3 +7,8 @@ variable "master1_cpu" {
   description = "Kubernetes Master (master1) CPU"
   type        = number
 }
+
+variable "master1_ram" {
+  description = "Kubernetes Master (master1) RAM"
+  type        = number
+}

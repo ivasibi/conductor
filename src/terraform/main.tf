@@ -30,4 +30,5 @@ module "kubernetes" {
   pve1_template = proxmox_virtual_environment_vm.pve1_template.id
 
   master1_cpu = var.master1_cpu
+  master1_ram = var.master1_ram
 }

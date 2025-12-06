@@ -14,7 +14,7 @@ resource "proxmox_virtual_environment_vm" "master1" {
   }
 
   memory {
-    dedicated = 2048
+    dedicated = var.master1_ram
   }
 
   disk {

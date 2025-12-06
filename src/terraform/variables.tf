@@ -21,3 +21,9 @@ variable "master1_cpu" {
   type        = number
   default     = 1
 }
+
+variable "master1_ram" {
+  description = "Kubernetes Master (master1) RAM"
+  type        = number
+  default     = 2048
+}
