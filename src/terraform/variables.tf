@@ -15,3 +15,9 @@ variable "pve1_password" {
   type        = string
   sensitive   = true
 }
+
+variable "master1_cpu" {
+  description = "Kubernetes Master (master1) CPU"
+  type        = number
+  default     = 1
+}

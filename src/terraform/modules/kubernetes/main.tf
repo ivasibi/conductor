@@ -9,7 +9,7 @@ resource "proxmox_virtual_environment_vm" "master1" {
   }
 
   cpu {
-    cores = 1
+    cores = var.master1_cpu
     type  = "host"
   }
 
