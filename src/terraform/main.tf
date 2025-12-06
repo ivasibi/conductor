@@ -13,7 +13,6 @@ resource "proxmox_virtual_environment_vm" "pve1_template" {
   node_name = "pve1"
   name      = "template"
   vm_id     = 901
-  tags      = ["conductor"]
   template  = true
   started   = false
 
@@ -23,4 +22,10 @@ resource "proxmox_virtual_environment_vm" "pve1_template" {
     interface    = "scsi0"
     size         = 8
   }
+}
+
+module "kubernetes" {
+  source = "./modules/kubernetes"
+
+  pve1_template = proxmox_virtual_environment_vm.pve1_template.id
 }
