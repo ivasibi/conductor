@@ -27,3 +27,9 @@ variable "master1_ram" {
   type        = number
   default     = 2048
 }
+
+variable "master1_disk" {
+  description = "Kubernetes Master (master1) Disk"
+  type        = number
+  default     = 32
+}

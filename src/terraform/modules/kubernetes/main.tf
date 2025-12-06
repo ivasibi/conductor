@@ -20,7 +20,7 @@ resource "proxmox_virtual_environment_vm" "master1" {
   disk {
     datastore_id = "local-lvm"
     interface    = "scsi0"
-    size         = 32
+    size         = var.master1_disk
   }
 
   network_device {
