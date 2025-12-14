@@ -1,6 +1,7 @@
 .idea/
 src/terraform/.terraform/
 src/terraform/terraform.tfstate.d/
+volumes/
 
 src/terraform/.terraform.lock.hcl
 SKETCHPAD.md
