@@ -5,7 +5,7 @@ resource "proxmox_virtual_environment_file" "master1_network" {
 
   source_raw {
     file_name = "master1_network.yml"
-    data = templatefile("./templates/network.tpl", {
+    data = templatefile("./templates/network.tftpl", {
 
     })
   }
