@@ -1,14 +1,3 @@
-variable "netbox_endpoint" {
-  description = "Netbox (netbox) Endpoint"
-  type        = string
-}
-
-variable "netbox_token" {
-  description = "Netbox (netbox) Token"
-  type        = string
-  sensitive   = true
-}
-
 variable "pve1_endpoint" {
   description = "Proxmox VE (pve1) Endpoint"
   type        = string
@@ -22,23 +11,19 @@ variable "pve1_username" {
 variable "pve1_password" {
   description = "Proxmox VE (pve1) Password"
   type        = string
-  sensitive   = true
 }
 
 variable "master1_cpu" {
   description = "Kubernetes Master (master1) CPU"
   type        = number
-  default     = 1
 }
 
 variable "master1_ram" {
   description = "Kubernetes Master (master1) RAM"
   type        = number
-  default     = 2048
 }
 
 variable "master1_disk" {
   description = "Kubernetes Master (master1) Disk"
   type        = number
-  default     = 32
 }
