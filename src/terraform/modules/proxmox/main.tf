@@ -27,9 +27,14 @@ resource "proxmox_virtual_environment_vm" "pve1_template" {
 module "kubernetes" {
   source = "./modules/kubernetes"
 
+  network_mask = var.network_mask
+
+  gateway_address = var.gateway_address
+
   pve1_template = proxmox_virtual_environment_vm.pve1_template.id
 
-  master1_cpu  = var.master1_cpu
-  master1_ram  = var.master1_ram
-  master1_disk = var.master1_disk
+  master1_address = var.master1_address
+  master1_cpu     = var.master1_cpu
+  master1_ram     = var.master1_ram
+  master1_disk    = var.master1_disk
 }

@@ -6,7 +6,11 @@ resource "proxmox_virtual_environment_file" "master1_network" {
   source_raw {
     file_name = "master1_network.yml"
     data = templatefile("./templates/network.tftpl", {
+      network_mask    = var.network_mask
 
+      gateway_address = var.gateway_address
+
+      master1_address = var.master1_address
     })
   }
 }

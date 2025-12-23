@@ -1,3 +1,13 @@
+variable "network_mask" {
+  description = "Network Mask"
+  type        = string
+}
+
+variable "gateway_address" {
+  description = "Gateway Address"
+  type        = string
+}
+
 variable "pve1_endpoint" {
   description = "Proxmox VE (pve1) Endpoint"
   type        = string
@@ -10,6 +20,11 @@ variable "pve1_username" {
 
 variable "pve1_password" {
   description = "Proxmox VE (pve1) Password"
+  type        = string
+}
+
+variable "master1_address" {
+  description = "Kubernetes Master (master1) Address"
   type        = string
 }
 

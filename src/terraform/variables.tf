@@ -1,10 +1,21 @@
+variable "network_mask" {
+  description = "Network Mask"
+  type        = string
+  default     = "/24"
+}
+
+variable "gateway_address" {
+  description = "Gateway Address"
+  type        = string
+}
+
 variable "netbox_endpoint" {
-  description = "Netbox (netbox) Endpoint"
+  description = "Netbox Endpoint"
   type        = string
 }
 
 variable "netbox_token" {
-  description = "Netbox (netbox) Token"
+  description = "Netbox Token"
   type        = string
   sensitive   = true
 }
@@ -23,6 +34,11 @@ variable "pve1_password" {
   description = "Proxmox VE (pve1) Password"
   type        = string
   sensitive   = true
+}
+
+variable "master1_address" {
+  description = "Kubernetes Master (master1) Address"
+  type        = string
 }
 
 variable "master1_cpu" {
