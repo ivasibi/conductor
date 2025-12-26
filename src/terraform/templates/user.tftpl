@@ -1,0 +1,18 @@
+#cloud-config
+hostname: ${hostname}
+prefer_fqdn_over_hostname: false
+ssh_pwauth: true
+users:
+  - name: ansible
+    groups: wheel
+    shell: /bin/bash
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    ssh_authorized_keys:
+      - ${network_ssh}
+  - name: ${username}
+    groups: wheel
+    shell: /bin/bash
+    lock_passwd: false
+    passwd: ${password}
+    ssh_authorized_keys:
+      - ${network_ssh}

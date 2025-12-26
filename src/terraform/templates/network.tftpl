@@ -1,9 +1,10 @@
+#cloud-config
 network:
   version: 2
   ethernets:
     ens18:
       dhcp4: false
-      addresses: [${master1_address}${network_mask}]
+      addresses: [${address}${network_mask}]
       gateway4: ${gateway_address}
       nameservers:
         addresses: [${gateway_address}, 8.8.8.8]
