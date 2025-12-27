@@ -21,7 +21,7 @@ resource "proxmox_virtual_environment_file" "master1_user" {
   source_raw {
     file_name = "master1_user.yml"
     data = templatefile("./templates/user.tftpl", {
-      network_ssh = var.network_ssh
+      network_ssh = file(var.network_ssh)
       hostname    = "master1"
       username    = var.master1_username
       password    = var.master1_password

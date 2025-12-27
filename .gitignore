@@ -1,4 +1,5 @@
 .idea/
+configs/
 src/terraform/.terraform/
 src/terraform/terraform.tfstate.d/
 volumes/

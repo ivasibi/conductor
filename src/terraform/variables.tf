@@ -7,6 +7,7 @@ variable "network_mask" {
 variable "network_ssh" {
   description = "Network SSH"
   type        = string
+  default     = "../../configs/keys/id_ed25519.pub"
 }
 
 variable "gateway_address" {
