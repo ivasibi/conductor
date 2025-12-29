@@ -55,7 +55,7 @@ variable "master1_username" {
 variable "master1_password" {
   description = "Kubernetes Master (master1) Password"
   type        = string
-  sensitive   = true
+  default     = "../../configs/hashes/master1.txt"
 }
 
 variable "master1_cpu" {

@@ -24,7 +24,7 @@ resource "proxmox_virtual_environment_file" "master1_user" {
       network_ssh = file(var.network_ssh)
       hostname    = "master1"
       username    = var.master1_username
-      password    = var.master1_password
+      password    = file(var.master1_password)
     })
   }
 }
