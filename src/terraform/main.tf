@@ -1,3 +1,7 @@
+resource "netbox_site" "network_site" {
+  name = var.network_site
+}
+
 module "proxmox" {
   source = "./modules/proxmox"
 

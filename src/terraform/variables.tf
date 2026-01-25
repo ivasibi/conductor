@@ -1,3 +1,8 @@
+variable "network_site" {
+  description = "Network Site"
+  type        = string
+}
+
 variable "network_mask" {
   description = "Network Mask"
   type        = string
