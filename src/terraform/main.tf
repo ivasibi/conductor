@@ -1,5 +1,33 @@
-resource "netbox_site" "network_site" {
-  name = var.network_site
+locals {
+  manufacturers = toset([
+    var.gateway_manufacturer,
+    var.pve1_manufacturer
+  ])
+  devices = {
+    "${var.gateway_manufacturer}::${var.gateway_model}" = {
+      manufacturer = var.gateway_manufacturer
+      model        = var.gateway_model
+    }
+    "${var.pve1_manufacturer}::${var.pve1_model}" = {
+      manufacturer = var.pve1_manufacturer
+      model        = var.pve1_model
+    }
+  }
+}
+
+resource "netbox_site" "location" {
+  name = var.network_location
+}
+
+resource "netbox_manufacturer" "manufacturers" {
+  for_each = local.manufacturers
+  name     = each.value
+}
+
+resource "netbox_device_type" "models" {
+  for_each        = local.devices
+  manufacturer_id = netbox_manufacturer.manufacturers[each.value.manufacturer].id
+  model           = each.value.model
 }
 
 module "proxmox" {

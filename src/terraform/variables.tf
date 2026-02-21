@@ -1,5 +1,5 @@
-variable "network_site" {
-  description = "Network Site"
+variable "network_location" {
+  description = "Network Location"
   type        = string
 }
 
@@ -13,6 +13,18 @@ variable "network_ssh" {
   description = "Network SSH"
   type        = string
   default     = "../../configs/keys/id_ed25519.pub"
+}
+
+variable "gateway_manufacturer" {
+  description = "Gateway Manufacturer"
+  type        = string
+  default     = "Unknown"
+}
+
+variable "gateway_model" {
+  description = "Gateway Model"
+  type        = string
+  default     = "Unknown"
 }
 
 variable "gateway_address" {
@@ -29,6 +41,18 @@ variable "netbox_token" {
   description = "Netbox Token"
   type        = string
   sensitive   = true
+}
+
+variable "pve1_manufacturer" {
+  description = "Proxmox VE (pve1) Manufacturer"
+  type        = string
+  default     = "Unknown"
+}
+
+variable "pve1_model" {
+  description = "Proxmox VE (pve1) Model"
+  type        = string
+  default     = "Unknown"
 }
 
 variable "pve1_endpoint" {

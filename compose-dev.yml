@@ -2,7 +2,7 @@ name: conductor-dev
 services:
 
   netbox:
-    image: linuxserver/netbox:4.4.8
+    image: linuxserver/netbox:4.3.7
     container_name: conductor-netbox-dev
     restart: unless-stopped
     environment:
